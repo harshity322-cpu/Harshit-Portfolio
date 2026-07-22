@@ -427,7 +427,7 @@ document.addEventListener("touchmove", onMouseMove,{passive:true});
 
 }
 
-    let nekoFile = "./oneko.gif"
+    let nekoFile = "./cat-animation.gif"
     const curScript = document.currentScript
     if (curScript && curScript.dataset.cat) {
       nekoFile = curScript.dataset.cat

@@ -6,12 +6,6 @@
 
 ---
 
-## Preview
-
-![Portfolio Preview](Harshit_Photo.jpeg)
-
----
-
 ## Features
 
 - **Animated Particle Background** — Interactive canvas-based particle network
@@ -93,9 +87,8 @@ harshit-portfolio/
 ├── index.html          # Main HTML
 ├── style.css           # All styles (dark theme, glassmorphism, responsive)
 ├── script.js           # Particles, typing, cursor, filters, animations
-├── oneko.js            # Virtual pet engine (cat companion)
-├── oneko.gif           # Pet sprite sheet
-└── Harshit_Photo.jpeg  # Profile photo
+├── cat-animation.js     # Virtual pet engine (cat companion)
+└── cat-animation.gif    # Pet sprite sheet
 ```
 
 ---

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshit Yadav | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Harshit Yadav — Full Stack Developer specializing in React, Node.js, and modern web technologies." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span>Harshit Yadav</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li>
+    <button
+        id="spawnPetBtn"
+        class="nav-pet-btn">
+        🐱 Virtual Pet
+    </button>
+    <button
+    id="fishBtn"
+    class="nav-pet-btn">
+    🐟 Fish
+</button>
+
+<button
+    id="yarnBtn"
+    class="nav-pet-btn">
+    🧶 Yarn
+</button>
+</li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Harshit Yadav</h1>
+        <div class="hero-title">
+          <span class="typed-prefix">I'm a </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-description">
+          Building modern, scalable and user-focused web applications while continuously learning new technologies.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="4">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="2">0</span>
+            <span class="stat-label">Internships</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="15">0</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="3">0</span>
+            <span class="stat-label">Certificates</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-shape">
+          <div class="shape-ring ring-1"></div>
+          <div class="shape-ring ring-2"></div>
+          <div class="shape-ring ring-3"></div>
+          <div class="hero-avatar"><img src="Harshit_Photo.jpeg" alt="Harshit">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="mouse-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title" data-text="About Me">About Me</h2>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-card">
+            <div class="about-avatar"><img src="Harshit_Photo.jpeg" alt="Harshit">
+            </div>
+            <div class="about-card-info">
+              <h3>Harshit Yadav</h3>
+              <p>Full Stack Developer</p>
+              <p class="location">Delhi NCR, India</p>
+            </div>
+            <div class="about-card-socials">
+              <a href="https://github.com/harshity322-cpu" target="_blank" class="social-icon" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/harshit-yadav-00aa082b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-icon" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="harshity322@gmail.com" class="social-icon" title="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <h3>A passionate developer who loves building things</h3>
+          <p>
+            I'm a Full Stack Developer focused on creating modern, user-friendly web applications.
+            I enjoy understanding problems before writing code and believe in building complete products,
+            not just pages. I focus on clean UI and maintainable code while continuously learning new technologies.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">&#9881;</span>
+              <span>Problem Solving</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">&#9733;</span>
+              <span>Clean UI Design</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">&#9878;</span>
+              <span>Full Stack Thinking</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">&#10024;</span>
+              <span>Continuous Learning</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">&#9775;</span>
+              <span>Team Collaboration</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">&#10047;</span>
+              <span>Attention to Detail</span>
+            </div>
+          </div>
+          <div class="about-principles">
+            <h4>My Development Principles</h4>
+            <ul>
+              <li>I enjoy building complete products, not just pages.</li>
+              <li>I focus on clean UI and maintainable code.</li>
+              <li>I continuously learn modern technologies.</li>
+              <li>I value user experience as much as functionality.</li>
+              <li>I believe software should be beautiful, fast and accessible.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <h2 class="section-title" data-text="Skills">Skills</h2>
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category" data-category="frontend">
+          <div class="skill-category-header">
+            <div class="skill-icon" style="--accent: #7C3AED">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Frontend Development</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="99"><span class="skill-name">HTML</span><div class="skill-bar"><div class="skill-fill" style="--width:99%"></div></div></div>
+            <div class="skill-item" data-level="96"><span class="skill-name">CSS</span><div class="skill-bar"><div class="skill-fill" style="--width:96%"></div></div></div>
+            <div class="skill-item" data-level="98"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--width:98%"></div></div></div>
+            <div class="skill-item" data-level="96"><span class="skill-name">React</span><div class="skill-bar"><div class="skill-fill" style="--width:96%"></div></div></div>
+            <div class="skill-item" data-level="92"><span class="skill-name">Tailwind CSS</span><div class="skill-bar"><div class="skill-fill" style="--width:92%"></div></div></div>
+            <div class="skill-item" data-level="86"><span class="skill-name">Bootstrap</span><div class="skill-bar"><div class="skill-fill" style="--width:86%"></div></div></div>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-category" data-category="backend">
+          <div class="skill-category-header">
+            <div class="skill-icon" style="--accent: #2563EB">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <h3>Backend Development</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="92"><span class="skill-name">Node.js</span><div class="skill-bar"><div class="skill-fill" style="--width:92%"></div></div></div>
+            <div class="skill-item" data-level="90"><span class="skill-name">Express.js</span><div class="skill-bar"><div class="skill-fill" style="--width:90%"></div></div></div>
+            <div class="skill-item" data-level="95"><span class="skill-name">REST API</span><div class="skill-bar"><div class="skill-fill" style="--width:95%"></div></div></div>
+            <div class="skill-item" data-level="88"><span class="skill-name">JWT Auth</span><div class="skill-bar"><div class="skill-fill" style="--width:88%"></div></div></div>
+          </div>
+        </div>
+        <!-- Database -->
+        <div class="skill-category" data-category="database">
+          <div class="skill-category-header">
+            <div class="skill-icon" style="--accent: #06B6D4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="96"><span class="skill-name">MongoDB</span><div class="skill-bar"><div class="skill-fill" style="--width:96%"></div></div></div>
+            <div class="skill-item" data-level="93"><span class="skill-name">SQL</span><div class="skill-bar"><div class="skill-fill" style="--width:93%"></div></div></div>
+          </div>
+        </div>
+        <!-- Tools -->
+        <div class="skill-category" data-category="tools">
+          <div class="skill-category-header">
+            <div class="skill-icon" style="--accent: #F59E0B">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="98"><span class="skill-name">Git</span><div class="skill-bar"><div class="skill-fill" style="--width:98%"></div></div></div>
+            <div class="skill-item" data-level="95"><span class="skill-name">GitHub</span><div class="skill-bar"><div class="skill-fill" style="--width:95%"></div></div></div>
+            <div class="skill-item" data-level="99"><span class="skill-name">VS Code</span><div class="skill-bar"><div class="skill-fill" style="--width:99%"></div></div></div>
+            <div class="skill-item" data-level="80"><span class="skill-name">Postman</span><div class="skill-bar"><div class="skill-fill" style="--width:80%"></div></div></div>
+          </div>
+        </div>
+        <!-- Languages -->
+        <div class="skill-category" data-category="languages">
+          <div class="skill-category-header">
+            <div class="skill-icon" style="--accent: #22C55E">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            </div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="93"><span class="skill-name">JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--width:93%"></div></div></div>
+            <div class="skill-item" data-level="90"><span class="skill-name">C++</span><div class="skill-bar"><div class="skill-fill" style="--width:90%"></div></div></div>
+            <div class="skill-item" data-level="73"><span class="skill-name">C</span><div class="skill-bar"><div class="skill-fill" style="--width:73%"></div></div></div>
+            <div class="skill-item" data-level="66"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-fill" style="--width:66%"></div></div></div>
+            <div class="skill-item" data-level="30"><span class="skill-name">Java</span><div class="skill-bar"><div class="skill-fill" style="--width:30%"></div></div></div>
+          </div>
+        </div>
+        <!-- Data Analytics -->
+        <div class="skill-category" data-category="analytics">
+          <div class="skill-category-header">
+            <div class="skill-icon" style="--accent: #EC4899">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3>Data Analytics</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="95"><span class="skill-name">SQL Queries</span><div class="skill-bar"><div class="skill-fill" style="--width:95%"></div></div></div>
+            <div class="skill-item" data-level="98"><span class="skill-name">Excel</span><div class="skill-bar"><div class="skill-fill" style="--width:98%"></div></div></div>
+            <div class="skill-item" data-level="70"><span class="skill-name">Data Cleaning</span><div class="skill-bar"><div class="skill-fill" style="--width:70%"></div></div></div>
+            <div class="skill-item" data-level="65"><span class="skill-name">Visualization</span><div class="skill-bar"><div class="skill-fill" style="--width:65%"></div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning Roadmap -->
+      <div class="roadmap">
+        <h3 class="roadmap-title">Currently Learning</h3>
+        <div class="roadmap-items">
+          <div class="roadmap-item completed"><span class="roadmap-dot"></span>React Ecosystem</div>
+          <div class="roadmap-item learning"><span class="roadmap-dot"></span>TypeScript</div>
+          <div class="roadmap-item learning"><span class="roadmap-dot"></span>Next.js</div>
+          <div class="roadmap-item learning"><span class="roadmap-dot"></span>AI & Machine Learning</div>
+          <div class="roadmap-item planned"><span class="roadmap-dot"></span>Generative AI</div>
+          <div class="roadmap-item planned"><span class="roadmap-dot"></span>Docker</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2 class="section-title" data-text="Projects">Projects</h2>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+      </div>
+      <div class="projects-grid">
+        <!-- ThinkVerse -->
+        <div class="project-card featured" data-category="fullstack">
+          <div class="project-badge">Featured</div>
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link" title="Live Demo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">ThinkVerse</h3>
+          <p class="project-description">A full-stack blogging and content platform with JWT authentication, CRUD operations, responsive UI, and REST API integration.</p>
+          <div class="project-features">
+            <span>JWT Authentication</span>
+            <span>Blog CRUD</span>
+            <span>Responsive UI</span>
+            <span>REST API</span>
+          </div>
+          <div class="project-tech">
+            <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span>
+          </div>
+          <div class="project-stats">
+            <div class="project-stat"><span>12</span> Modules</div>
+            <div class="project-stat"><span>8</span> APIs</div>
+            <div class="project-stat"><span>15</span> Pages</div>
+          </div>
+        </div>
+
+        <!-- WorkAdda -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link" title="Live Demo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">WorkAdda</h3>
+          <p class="project-description">A job discovery and networking platform connecting developers with opportunities. Features responsive design and job listings.</p>
+          <div class="project-features">
+            <span>Job Listings</span>
+            <span>User Profiles</span>
+            <span>Search & Filter</span>
+          </div>
+          <div class="project-tech">
+            <span>React</span><span>Node.js</span><span>MongoDB</span><span>Tailwind</span>
+          </div>
+          <div class="project-stats">
+            <div class="project-stat"><span>8</span> Modules</div>
+            <div class="project-stat"><span>10</span> Pages</div>
+          </div>
+        </div>
+
+        <!-- Crypto Converter -->
+        <div class="project-card" data-category="frontend">
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="project-link" title="Live Demo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Cryptocurrency Converter</h3>
+          <p class="project-description">Real-time cryptocurrency price converter with live market data, interactive charts, and multi-currency support.</p>
+          <div class="project-features">
+            <span>Real-time Prices</span>
+            <span>Multi-Currency</span>
+            <span>Interactive Charts</span>
+          </div>
+          <div class="project-tech">
+            <span>JavaScript</span><span>HTML</span><span>CSS</span><span>API</span>
+          </div>
+          <div class="project-stats">
+            <div class="project-stat"><span>4</span> Modules</div>
+            <div class="project-stat"><span>2</span> APIs</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section experience">
+    <div class="container">
+      <h2 class="section-title" data-text="Experience">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item" data-color="#7C3AED">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <span class="timeline-badge internship">Internship</span>
+              <span class="timeline-date">2024</span>
+            </div>
+            <h3>Web Development Intern</h3>
+            <h4>Propsalt Landbase Pvt Ltd</h4>
+            <p class="timeline-location">India</p>
+            <ul class="timeline-list">
+              <li>Built Cryptocurrency Converter application</li>
+              <li>Integrated third-party APIs for live data</li>
+              <li>Developed responsive user interfaces</li>
+              <li>Implemented frontend logic with JavaScript</li>
+              <li>Collaborated on debugging and testing</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span><span>Git</span>
+            </div>
+            <div class="timeline-learnings">
+              <h5>Key Learnings</h5>
+              <div class="learning-tags">
+                <span>API Integration</span><span>Responsive UI</span><span>Frontend Workflow</span><span>Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item" data-color="#2563EB">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <span class="timeline-badge internship">Internship</span>
+              <span class="timeline-date">2023</span>
+            </div>
+            <h3>Electronics & Communication Intern</h3>
+            <h4>Beumer Group Pvt Ltd</h4>
+            <p class="timeline-location">India</p>
+            <ul class="timeline-list">
+              <li>Industrial electronics exposure</li>
+              <li>Automation systems observation</li>
+              <li>Electrical panel understanding</li>
+              <li>Machine troubleshooting basics</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>Electronics</span><span>Automation</span><span>Documentation</span>
+            </div>
+            <div class="timeline-learnings">
+              <h5>Key Learnings</h5>
+              <div class="learning-tags">
+                <span>Industrial Workflow</span><span>Team Collaboration</span><span>Safety Standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section education">
+    <div class="container">
+      <h2 class="section-title" data-text="Education">Education</h2>
+      <div class="education-grid">
+        <div class="education-card highlight">
+          <div class="edu-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>B.Tech Computer Science Engineering</h3>
+          <h4>Dronacharya College of Engineering</h4>
+          <p class="edu-location">Gurgaon</p>
+          <p class="edu-date">2023 &mdash; 2026</p>
+          <p class="edu-desc">B.Tech CSE graduate with focus on full stack development and modern web technologies.</p>
+          <div class="edu-subjects">
+            <span>Data Structures</span><span>Operating Systems</span><span>DBMS</span>
+            <span>Computer Networks</span><span>Web Development</span><span>Machine Learning</span>
+          </div>
+        </div>
+
+        <div class="education-card highlight">
+          <div class="edu-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/></svg>
+          </div>
+          <h3>Diploma in Electronics & Communication</h3>
+          <h4>Sir Chhotu Ram Polytechnic</h4>
+          <p class="edu-location">Rohtak</p>
+          <p class="edu-date">2019 &mdash; 2022</p>
+          <p class="edu-desc">Gained practical exposure in electronics, circuit design, and communication systems.</p>
+          <div class="edu-subjects">
+            <span>Electronics</span><span>Circuit Design</span><span>Communication Systems</span>
+          </div>
+        </div>
+
+        <div class="education-card">
+          <div class="edu-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 6 3 6 3s3 0 6-3v-5"/></svg>
+          </div>
+          <h3>Senior Secondary (Science PCM)</h3>
+          <h4>NIOS</h4>
+          <p class="edu-location">Delhi</p>
+          <p class="edu-date">2020 &mdash; 2021</p>
+          <p class="edu-desc">Strengthened analytical thinking and mathematical foundation.</p>
+        </div>
+
+        <div class="education-card">
+          <div class="edu-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h3>Secondary School</h3>
+          <h4>Gyan Jyoti Public School (CBSE)</h4>
+          <p class="edu-location">Delhi</p>
+          <p class="edu-date">2018 &mdash; 2019</p>
+          <p class="edu-desc">Built strong academic fundamentals and developed curiosity towards technology.</p>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <h3 class="subsection-title">Certifications</h3>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h4>NPTEL Cloud Computing</h4>
+          <p class="cert-issuer">NPTEL &bull; 2026</p>
+          <p class="cert-desc">Cloud computing fundamentals, virtualization, deployment, and distributed systems.</p>
+          <div class="cert-skills">
+            <span>Cloud Computing</span><span>Networking</span><span>Virtualization</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h4>DUCAT Full Stack Development</h4>
+          <p class="cert-issuer">DUCAT &bull; 2022</p>
+          <p class="cert-desc">Comprehensive full stack development training covering Full-Stack, Java, C, C++ and Databases.</p>
+          <div class="cert-skills">
+            <span>Full-Stack</span><span>Java</span><span>C</span><span>C++</span><span>Databases</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h4>Japanese Language Course</h4>
+          <p class="cert-issuer">The Japan Foundation &bull; 2021</p>
+          <p class="cert-desc">Japanese language proficiency developing communication skills and cultural understanding.</p>
+          <div class="cert-skills">
+            <span>Communication</span><span>Cultural Awareness</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title" data-text="Contact">Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's Work Together</h3>
+          <p>I'm always open to new opportunities and interesting projects. Feel free to reach out!</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:harshity322@gmail.com">harshity322@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span>Delhi, India</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">Role</span>
+                <span>Full Stack Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/harshity322-cpu" target="_blank" class="social-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/harshit-yadav-00aa082b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" required placeholder=" " />
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" required placeholder=" " />
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" required placeholder=" " />
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-bracket">&lt;</span>HY<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p>Designed & Built by <strong>Harshit Yadav</strong></p>
+        <p class="footer-copy">&copy; 2026 All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+  <script src="oneko.js"></script>
+</body>
+</html>
